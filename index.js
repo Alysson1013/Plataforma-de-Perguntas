@@ -15,5 +15,8 @@ app.get('/', (req, res) => {
 
 app.get('/perguntar', (req, res) => res.render('perguntar'))
 
+//Rota para enviar dados para o Node
+app.post('/salvarpergunta', (req, res) => res.send("Formulário Salvo"))
+
 //Rodando Servidor
 app.listen(8080, ()=> console.log("App rodando!!!"))
