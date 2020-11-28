@@ -19,6 +19,6 @@ const Pergunta = connection.define('pergunta', {
 //Sincroniza com banco de dados, caso não exista cria, force: false não cria a tabela.
 Pergunta.sync({
     force: false
-}).then(() => console.log('Tabela Criada'))
+})
 
 module.exports = Pergunta

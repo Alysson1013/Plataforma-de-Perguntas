@@ -6,6 +6,7 @@ const connection = require('./database/database')
 //importando Model
 const perguntaModel = require('./database/Pergunta');
 const Pergunta = require("./database/Pergunta");
+const Resposta = require("./database/Resposta")
 
 connection
     .authenticate()
