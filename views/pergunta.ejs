@@ -5,11 +5,12 @@
         <hr>
             <h1><%= pergunta.titulo %></h1>
             <p><%= pergunta.descricao %></p>
-            <form action="">
+            <form method="POST" action="/responder">
                 <h3>Responda</h3>
                 <label>resposta: </label>
                 <textarea placeholder="Digite sua resposta" class="form-control" name="corpo"></textarea>
                 <br>
+                <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
                 <button type="submit" class="btn btn-primary"> Responder </button>
             </form>
         <hr>
