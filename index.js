@@ -54,5 +54,20 @@ app.post('/salvarpergunta', (req, res) => {
     }).then(()=> res.redirect('/'))
 })
 
+
+//Rota de Pergutnas
+app.get('/pergunta/:id', (req, res) => {
+    const id = req.params.id;
+    Pergunta.findOne({
+        where: {id: id}
+    }).then(pergunta => {
+        if(pergunta != undefined){
+            res.render("pergunta")
+        } else {
+            res.redirect("/")
+        }
+    })
+})
+
 //Rodando Servidor
 app.listen(8080, ()=> console.log("App rodando!!!"))
