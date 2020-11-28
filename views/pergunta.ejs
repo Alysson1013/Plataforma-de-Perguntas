@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include ('./partials/header.ejs') %>
 <body>
-    <h3>Pagina Pergunta</h3>
+    <%- include ('./partials/navbar.ejs') %>
+    <div class="container">
+        <hr>
+            <h1><%= pergunta.titulo %></h1>
+            <p><%= pergunta.descricao %></p>
+        <hr>
+    </div>
 </body>
-</html>
+<%- include ('./partials/footer.ejs') %>
